@@ -1,38 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   liste.c                                            :+:      :+:    :+:   */
+/*   swap_2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/25 11:39:24 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/02/17 15:44:38 by kgezgin          ###   ########.fr       */
+/*   Created: 2023/02/03 11:54:51 by kgezgin           #+#    #+#             */
+/*   Updated: 2023/02/13 17:53:33 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-t_list	*my_lstnew(int nb)
+void	r_rotate(t_list **lst, char w)
 {
-	t_list	*liste;
+	t_list	*temp;
+	t_list	*temp_2;
 
-	liste = malloc(sizeof(*liste));
-	liste->nb = nb;
-	liste->next = NULL;
-	return (liste);
+	if (!(*lst))
+		return ;
+	temp = *lst;
+	while (temp->next->next != NULL)
+		temp = temp->next;
+	temp_2 = temp->next;
+	temp->next = NULL;
+	temp_2->next = *lst;
+	*lst = temp_2;
+	if (w == 'a')
+		write(1, "rra\n", 4);
+	else if (w == 'b')
+		write(1, "rrb\n", 4);
 }
 
-void	my_lstadd_back(t_list **lst, t_list *new)
+void	rrr(t_list **lst_a, t_list **lst_b)
 {
-	t_list	*current_node;
-
-	current_node = *lst;
-	if (!*lst)
-	{
-		*lst = new;
-		return ;
-	}
-	while (current_node->next != NULL)
-		current_node = current_node->next;
-	current_node->next = new;
+	r_rotate(lst_a, 'c');
+	r_rotate(lst_b, 'c');
+	write(1, "rrr\n", 4);
 }

@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 13:35:38 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/21 13:15:31 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/02/17 16:43:45 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	new_str[i] = '\0';
 	return (new_str);
 }
-
-/*
-int main()
-{
-	printf("[%s]\n", ft_substr("aaabbbccc", 4, 2));
-	return (0);
-}
-*/

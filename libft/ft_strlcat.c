@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:00:35 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/14 18:58:18 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/02/17 16:43:34 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		j++;
 	return (dstsize + j);
 }
-
-/*
-int	main()
-{
-	char	dest[50] = "4444";
-	const	char *src = "333";
-	int		n = 9;
-	printf("[%ld]\n", ft_strlcat(dest, src, n));
-	return (0);	
-}
-*/

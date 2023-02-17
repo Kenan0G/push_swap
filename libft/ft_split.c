@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 14:13:08 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/15 14:09:43 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/02/17 16:43:10 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,20 +92,3 @@ char	**ft_split(char const *s, char c)
 	split[i] = NULL;
 	return (split);
 }
-
-/*
-int main()
-{
-	int	i;
-	char	**split = ft_split("undeucxtrois", 'c');
-
-	i = 0;
-	while (split[i] != 0)
-  {
-      printf("[%s]\n", split[i]);
-      ++i;
-  }
-
-	return(0);
-}
-*/

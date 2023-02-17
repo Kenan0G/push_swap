@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 10:51:21 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/14 14:38:32 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/02/17 16:43:17 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*
-int	main()
-{
-	char	var1[50] = "1234567";
-	//char	var2[50] = "1234567";
-	char	var3[50] = "1234567";
-	//char	var4[50] = "1234567";
-	size_t n = 4;
-
-
-	ft_memmove(var1 + 3, var1, n);
-	memmove(var3 + 3, var3, n);
-	printf("[%s]\n", var1);
-	printf("[%s]\n", var3);
-	return (0);
-}
-*/

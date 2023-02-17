@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 15:00:04 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/18 10:13:56 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/02/17 16:43:40 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,14 +54,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	res[k] = '\0';
 	return (res);
 }
-/*
-int	main()
-{
-	char	const *s1 = "abcwdw";
-	char 	const *set = "-";
-	char	*str = ft_strtrim(s1, set);
-
-	printf("[%s]\n", str);
-	return (0);
-}
-*/

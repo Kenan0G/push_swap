@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 13:57:30 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/01/24 19:41:47 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/02/17 16:43:28 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	res[i] = '\0';
 	return ((char *)res);
 }
-
-/*
-int	main()
-{
-	printf("resultat :%s\n", ft_strjoin("salut", ""));
-	return (0);
-}
-*/

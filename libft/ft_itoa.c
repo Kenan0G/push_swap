@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 15:19:59 by kgezgin           #+#    #+#             */
-/*   Updated: 2022/11/15 14:46:55 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/02/17 16:43:07 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,11 +61,3 @@ char	*ft_itoa(int n)
 		len++;
 	return (ft_convert(n, len, sign));
 }
-
-/*
-int	main(void)
-{
-	printf("resultat :[%s]\n", ft_itoa(10));
-	return (0);
-}
-*/
