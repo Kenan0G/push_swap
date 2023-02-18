@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 14:20:25 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/02/17 16:02:15 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/02/17 19:46:48 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	init_init(t_init *init)
 {
 	init->check = 1;
 	init->ptr = &(init->check);
+	init->k = 1;
 }
 
 t_list	*init(int ac, char **av, t_init *init)
@@ -36,11 +37,12 @@ t_list	*init(int ac, char **av, t_init *init)
 		{
 			ft_check_vide_and_my_atoi(init, &lst, 1, j);
 			j++;
+			init->k++;
 		}
 		ft_free_map((init)->str);
 		i++;
 	}
-	(init)->tab_len = i - 1;
+	(init)->tab_len = init->k - 1;
 	ft_check(&lst);
 	return (lst);
 }

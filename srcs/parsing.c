@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 12:50:58 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/02/17 16:45:33 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/02/17 19:46:31 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	check_tri(t_list *lst)
 			return (1);
 		tmp = tmp->next;
 	}
-	return (ft_putstr_fd("Error\n", 2), 0);
+	return (0);
 }
 
 int	ft_check(t_list **lst)

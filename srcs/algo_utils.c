@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 15:47:17 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/02/17 16:04:47 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/02/17 19:08:41 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,10 @@ void	put_top_b(t_list **lst, int content)
 	}
 }
 
-int	tri_5(t_list **lst_a, t_list **lst_b, t_init *init)
+void	tri_2(t_list **lst_a)
 {
-	put_top_a(lst_a, init->tab[0]);
-	push(lst_a, lst_b, 'b');
-	put_top_a(lst_a, init->tab[1]);
-	push(lst_a, lst_b, 'b');
-	tri_3(lst_a, init);
-	push(lst_b, lst_a, 'a');
-	push(lst_b, lst_a, 'a');
-	return (0);
+	if ((*lst_a)->nb > (*lst_a)->next->nb)
+		swap(lst_a, 'a');
 }
 
 int	tri_3(t_list **lst_a, t_init *init)
@@ -57,4 +51,16 @@ int	tri_3(t_list **lst_a, t_init *init)
 		return (1);
 	swap(lst_a, 'a');
 	return (1);
+}
+
+int	tri_5(t_list **lst_a, t_list **lst_b, t_init *init)
+{
+	put_top_a(lst_a, init->tab[0]);
+	push(lst_a, lst_b, 'b');
+	put_top_a(lst_a, init->tab[1]);
+	push(lst_a, lst_b, 'b');
+	tri_3(lst_a, init);
+	push(lst_b, lst_a, 'a');
+	push(lst_b, lst_a, 'a');
+	return (0);
 }

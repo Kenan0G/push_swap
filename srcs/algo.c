@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:14:41 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/02/17 16:11:47 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/02/17 18:33:35 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,27 @@
 void	algo(t_list **lst_a, t_list **lst_b, t_init *init)
 {
 	init_tab(*lst_a, *lst_b, init);
-	if (init->tab_len == 3)
+	if (init->tab_len == 2)
+		tri_2(lst_a);
+	else if (init->tab_len == 3)
 		tri_3(lst_a, init);
 	else if (init->tab_len == 5)
 		tri_5(lst_a, lst_b, init);
 	else
 		tri(lst_a, lst_b, init);
 	free(init->tab);
+}
+
+void	pre_tri(t_list **lst_a, t_list **lst_b, t_init *init)
+{
+	while ((*lst_a)->next != NULL)
+	{	
+		if ((*lst_a)->nb == init->plus_grand)
+			rotate(lst_a, 'a');
+		push(lst_a, lst_b, 'b');
+		if ((*lst_b)->nb < init->tab[init->mediane])
+			rotate(lst_b, 'b');
+	}
 }
 
 void	tri(t_list **lst_a, t_list **lst_b, t_init *init)
@@ -46,18 +60,6 @@ void	tri(t_list **lst_a, t_list **lst_b, t_init *init)
 		push(lst_b, lst_a, 'a');
 	}
 	tri_final(lst_a, init);
-}
-
-void	pre_tri(t_list **lst_a, t_list **lst_b, t_init *init)
-{
-	while ((*lst_a)->next != NULL)
-	{	
-		if ((*lst_a)->nb == init->plus_grand)
-			rotate(lst_a, 'a');
-		push(lst_a, lst_b, 'b');
-		if ((*lst_b)->nb < init->tab[init->mediane])
-			rotate(lst_b, 'b');
-	}
 }
 
 void	tri_final(t_list **lst, t_init *init)

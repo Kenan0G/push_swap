@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:07:33 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/02/17 16:11:12 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/02/17 19:44:52 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct s_init
 	int		index;
 	int		index_a;
 	int		index_b;
+	int		k;
 }				t_init;
 
 void	print_list(t_list *lst);
@@ -44,10 +45,11 @@ t_list	*init(int ac, char **av, t_init *init);
 void	init_tab(t_list *lst_a, t_list *lst_b, t_init *init);
 void	my_sort_int_tab(int *tab, int size);
 
-int		tri_3(t_list **lst_a, t_init *init);
-int		tri_5(t_list **lst_a, t_list **lst_b, t_init *init);
 void	put_top_a(t_list **lst, int content);
 void	put_top_b(t_list **lst, int content);
+void	tri_2(t_list **lst_a);
+int		tri_3(t_list **lst_a, t_init *init);
+int		tri_5(t_list **lst_a, t_list **lst_b, t_init *init);
 
 void	algo(t_list **lst_a, t_list **lst_b, t_init *init);
 void	tri(t_list **lst_a, t_list **lst_b, t_init *init);
