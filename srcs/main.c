@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 15:05:45 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/02/17 16:43:52 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/02/22 14:54:20 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(int ac, char **av)
 
 	liste_b = NULL;
 	if (ac < 2)
-		return (ft_putstr_fd("Error\n", 2), 0);
+		return (0);
 	liste_a = init(ac, av, &data_init);
 	algo(&liste_a, &liste_b, &data_init);
 	ft_free_list(&liste_a);
