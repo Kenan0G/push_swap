@@ -6,7 +6,7 @@
 #    By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/25 16:59:04 by kgezgin           #+#    #+#              #
-#    Updated: 2023/02/17 16:13:24 by kgezgin          ###   ########.fr        #
+#    Updated: 2023/02/22 10:51:24 by kgezgin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,13 +24,12 @@ SRCS		=	main.c\
 				calculator.c
 
 OBJS			=	$(addprefix $(SRC_DIR)/, $(SRCS:%.c=%.o))
-#DEPS.d			=	./includes/push_swap.h
 NAME			=	push_swap
 CC				=	gcc
-CFLAGS			=	-Wall -Wextra -Werror -g3 #-MMD -MP
+CFLAGS			=	-Wall -Wextra -Werror
 RM				=	rm -f
 
-.c.o: #Makefile
+.c.o:
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 $(NAME):	$(OBJS)
@@ -48,5 +47,4 @@ fclean:		clean
 
 re:			fclean all
 
-# -include $(DEPS)
 .PHONY: 	all clean fclean re
